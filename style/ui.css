@@ -1,1 +1,7 @@
 * {margin:0; padding:0;}
+
+.wraprer {}
+.side {position:absolute; left:0; top:0; width:200px; height:100%; background-color:#ddd;}
+.container {position:absolute; left:200px; top:0; width:100%; padding:20px;}
+.header {height:50px; border-bottom:2px solid #ddd;}
+.content {}
