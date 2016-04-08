@@ -1,11 +1,6 @@
 (function(){
-    // app start
-    window.addEventListener('DOMContentLoaded', function(){
-        var sc = document.createElement('script');
-        sc.setAttribute('src', 'js/jquery.js');
-        sc.addEventListener('load', _initialize);
-        document.head.appendChild(sc);
-    });
+    // set global
+    var $ = require('jquery');
     
     // size controller 
     var __sideArea, __container, __docW, __docH;
