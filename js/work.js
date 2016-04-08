@@ -1,25 +1,29 @@
 (function(){
+    // app start
+    window.addEventListener('DOMContentLoaded', function(){
+        var sc = document.createElement('script');
+        sc.setAttribute('src', 'js/jquery.js');
+        sc.addEventListener('load', _initialize);
+        document.head.appendChild(sc);
+    });
+    
     // size controller 
     var __sideArea, __container, __docW, __docH;
     
     function _initialize(){
-        __sideArea = document.querySelectorAll('.side')[0];
-        __container = document.querySelectorAll('.container')[0];
+        __sideArea = $('.side');
+        __container = $('.container');
         
-        window.addEventListener('resize', _setSize);
-        _setSize();
+        $(window).on('resize', _setSize).trigger('resize');
     }
     
     function _setSize(){
-        var doc = document.documentElement;
-        if( __docW == doc.clientWidth && __docH == doc.clientHeight ) return;
-        __docW = doc.clientWidth;
-        __docH = doc.clientHeight;
+        var doc = $(window), pad = 40;
+        if( __docW == doc.width() && __docH == doc.height() ) return;
+        __docW = doc.width();
+        __docH = doc.height();
         
-        __container.style.width = __docW - 200 - 40 + 'px';
-        __container.style.height = __docH - 40 + 'px';
-        __sideArea.style.height = __docH + 'px';
+        __container.width( __docW - 200 - pad ).height( __docH - pad );
+        __sideArea.height(__docH);
     }
-    
-    window.addEventListener('DOMContentLoaded', _initialize);
 })();
