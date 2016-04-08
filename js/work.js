@@ -17,6 +17,8 @@
         __docH = doc.clientHeight;
         
         __container.style.width = __docW - 200 - 40 + 'px';
+        __container.style.height = __docH - 40 + 'px';
+        __sideArea.style.height = __docH + 'px';
     }
     
     window.addEventListener('DOMContentLoaded', _initialize);
