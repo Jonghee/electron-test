@@ -2,6 +2,6 @@
 
 .wraprer {}
 .side {position:absolute; left:0; top:0; width:200px; height:100%; background-color:#ddd;}
-.container {position:absolute; left:200px; top:0; width:100%; padding:20px;}
+.container {position:absolute; left:200px; top:0; width:100%; padding:20px; overflow:scroll;}
 .header {height:50px; border-bottom:2px solid #ddd;}
 .content {}
