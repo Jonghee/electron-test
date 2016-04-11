@@ -1,9 +1,10 @@
 (function(){
     var $ = require('jquery'),
-        dom;
+        dom, imageList = $('<ul>');
     
     function init(options){
         dom = $(options.target);
+        imageList.appendTo(dom).addClass('imageList');
     }
     
     function show(word){
@@ -11,10 +12,16 @@
     }
     
     function render(list){
-        dom.empty();
+        var str = '';
+        imageList.empty();
         $.each(list, function(i,item){
-            $('<img>').attr('src', item.image).appendTo(dom).width(100).height(100);
+            str += '<li><a href=""><img src="';
+            str += item.image;
+            str += '" alt="" />';
+            str += '</a></li>';
+            // $('<img>').attr('src', item.image).appendTo(dom).width(100).height(100);
         });
+        imageList.html(str);
     }
     
     function getData(keyword, page, callback){

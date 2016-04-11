@@ -1,6 +1,7 @@
 (function($){
-    var __apiKey = 'b040b735cc3dc2f4d08f7511418fd74e',
-        __side = require('./js/side'),
+    const __apiKey = 'b040b735cc3dc2f4d08f7511418fd74e';
+    
+    var __side = require('./js/side'),
         __content = require('./js/content'),
         __container, __sideArea, __docW, __docH;
     

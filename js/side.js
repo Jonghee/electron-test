@@ -1,6 +1,9 @@
+'use strict';
+
 (function(){
-    var $ = require('jquery');
-    var cont = require('../js/content');
+    const $ = require('jquery'),
+        cont = require('../js/content');
+    
     var dom, data;
     
     exports.init = function(options){
@@ -13,8 +16,9 @@
         dom.find('a').eq(0).trigger('click');
     };
     exports.render = function(){
-        var self = this;
-        var htmlString = '<ul class="tagList">';
+        var self = this,
+            htmlString = '<ul class="tagList">';
+            
         $.each(data, function(i,item){
             htmlString += '<li><a href="#'+ item +'" data-index="'+ i +'">'+ item +'</a></li>';
         });

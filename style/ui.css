@@ -9,3 +9,5 @@
 .container {position:absolute; left:200px; top:0; width:100%; padding:20px; overflow:scroll;}
 .header {height:50px; border-bottom:2px solid #ddd;}
 .content {}
+.content .imageList ul {overflow:hidden;}
+.content .imageList img {float:left; height:100px;}
