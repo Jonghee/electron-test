@@ -9,14 +9,19 @@
         __container = $('.container');
         __cont = $('.content');
         
-        _getData('apple', 1, _render);
-        _getData('apple', 2, _render);
-        _getData('apple', 3, _render);
-        
+        // event handler
         $(window).on('resize', _setSize).trigger('resize');
+        __sideArea.find('a').on('click', function(){
+            __sideArea.find('a').removeClass('selected').eq( $(this).parent().index() ).addClass('selected');
+            _getData($(this).text(), 1, _render);
+        });
+        
+        // initialize
+        __sideArea.find('a').eq(0).trigger('click');
     }
     
     function _render(list){
+        __cont.empty();
         $.each(list, function(i,item){
             $('<img>').attr('src', item.image).appendTo(__cont).width(100).height(100);
         });
