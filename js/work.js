@@ -1,5 +1,7 @@
+'use strict';
+
 (function($){
-    var __apiKey = 'b040b735cc3dc2f4d08f7511418fd74e';
+    const __apiKey = 'b040b735cc3dc2f4d08f7511418fd74e';
     
     // size controller
     var __sideArea, __container, __cont, __docW, __docH;
