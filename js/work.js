@@ -1,3 +1,5 @@
+'use strict';
+
 (function($){
     const __apiKey = 'b040b735cc3dc2f4d08f7511418fd74e';
     

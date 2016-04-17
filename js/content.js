@@ -1,6 +1,10 @@
+'use strict';
+
 (function(){
-    var $ = require('jquery'),
-        dom, imageList = $('<ul>');
+    const   $ = require('jquery'),
+            key = 'b040b735cc3dc2f4d08f7511418fd74e';
+            
+    var dom, imageList = $('<ul>');
     
     function init(options){
         dom = $(options.target);
